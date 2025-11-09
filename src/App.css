@@ -1,8 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -39,4 +37,51 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* React Flow Course Map Styling */
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.react-flow__edge-path {
+  stroke: black;
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  border: 2px solid black;
+  border-radius: 4px;
+  background: white;
+}
+
+.react-flow__controls-button {
+  border-bottom: 1px solid black;
+  background: white;
+  color: black;
+}
+
+.react-flow__controls-button:hover {
+  background: #f0f0f0;
+}
+
+.react-flow__minimap {
+  border: 2px solid black;
+  border-radius: 4px;
+  background: white;
+}
+
+.react-flow__background {
+  background: white;
+}
+
+/* Hide React Flow watermark/attribution */
+.react-flow__attribution {
+  display: none !important;
 }
