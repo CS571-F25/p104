@@ -12,8 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Data folder
-src/data
+# Data folder - ignore venv and scripts, but keep JSON data files
+src/data/venv/
+src/data/scripts/
 
 # Editor directories and files
 .vscode/*
