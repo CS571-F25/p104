@@ -16,6 +16,7 @@ export default function TopNavBar() {
             <span style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 'bold' }}>
                 UW Course Map
             </span>
+            <span> for Computer Science</span>
         </Navbar.Brand>
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
