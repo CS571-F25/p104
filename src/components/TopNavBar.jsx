@@ -20,6 +20,7 @@ export default function TopNavBar() {
         </Navbar.Brand>
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
+                <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>
             </Nav>
         </Navbar.Collapse>
