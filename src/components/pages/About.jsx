@@ -1,28 +1,57 @@
-import TopNavBar from '../TopNavBar'
+import { Container, Card, ListGroup } from 'react-bootstrap';
+import TopNavBar from '../TopNavBar';
 
 export default function About(props) {
-  return <div>
-    <TopNavBar />
-      <p>This site is under construction and subject to change.</p>
-      <p>Idea:</p>
-      <ol>
-        <li>Get course data from <a href="https://guide.wisc.edu/courses/" target="_blank" rel="noopener noreferrer">https://guide.wisc.edu/courses/</a> and parse it into a JSON file</li>
-        <li>Parse the JSON file into a React Flow graph</li>
-      </ol>
+  return (
+    <div className="min-vh-100 bg-light">
+      <TopNavBar />
+      <Container className="py-5">
+        <Card className="shadow-sm">
+          <Card.Header as="h1" className="bg-primary text-white">About This Project</Card.Header>
+          <Card.Body>
+            <h2 className="h4 mb-3">Project Description</h2>
+            <Card.Text className="mb-4">
+              BadgerCourseMap is an interactive web application designed to help students at UW Madison visualize the prerequisite structures across undergraduate programs, starting with the Computer Science major.
+            </Card.Text>
 
-      <p>A few notes:</p>
-      <ul>
-      <li>Currently only supports Computer Science major, but the plan is to support all majors. (If I have time)</li>
-      <li>Click on a course to view its details and prerequisites</li>
-      <li>Prerequisites might be AND or OR, refer to the detail tab for accurate info</li>
-      <li>major requirement tags are hardcoded</li>
-      <li>Prerequisites from other majors are not included (e.g. Some CS courses require MATH)</li>
-      </ul>
+            <h2 className="h4 mb-3">Key Features</h2>
+            <ListGroup variant="flush" className="mb-4">
+              <ListGroup.Item>
+                <strong>Interactive Prerequisite Tree:</strong> Visualize courses as nodes in a dynamic graph.
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong>Course Details:</strong> Click on any node to view comprehensive course information, including credits, descriptions, and learning outcomes.
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong>Prerequisite Visualization:</strong> Automatically highlight prerequisite paths when a specific course is selected.
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong>Requirement Filtering:</strong> Filter and highlight courses based on major requirements (e.g., Basic Computer Sciences).
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong>Course Search:</strong> Browse and search the complete course catalog for the major.
+              </ListGroup.Item>
+            </ListGroup>
 
-      <p><b>What needs to change? Please send me an email at <a href="mailto:dehan.li@wisc.edu">dehan.li@wisc.edu</a>.</b></p>
+            <h2 className="h4 mb-3">Future Roadmap</h2>
+            <ListGroup variant="flush" className="mb-4">
+              <ListGroup.Item>
+                • Support for additional majors beyond Computer Science
+              </ListGroup.Item>
+              <ListGroup.Item>
+                • Integration with MadGrades and direct UW Guide links
+              </ListGroup.Item>
+              <ListGroup.Item>
+                • "Planned" vs. "Completed" course tracking
+              </ListGroup.Item>
+              <ListGroup.Item>
+                • Visualization of external prerequisites (e.g., Math requirements for CS)
+              </ListGroup.Item>
+            </ListGroup>
 
-    </div>
-
-
-
+          </Card.Body>
+        </Card>
+      </Container>
+    </div >
+  );
 }

@@ -16,10 +16,10 @@ export default function CourseList(props) {
     const code = course.courseCode.toLowerCase();
     const name = course.courseName.toLowerCase();
     const description = (course.description || '').toLowerCase();
-    
-    return code.includes(searchLower) || 
-           name.includes(searchLower) || 
-           description.includes(searchLower);
+
+    return code.includes(searchLower) ||
+      name.includes(searchLower) ||
+      description.includes(searchLower);
   });
 
   // Helper to get formatted code
@@ -33,12 +33,12 @@ export default function CourseList(props) {
       <TopNavBar />
       <Container className="mt-4 mb-5">
         <Card className="shadow-sm">
-          <Card.Header as="h2" className="bg-primary text-white">Course List</Card.Header>
+          <Card.Header as="h1" className="bg-primary text-white h2">Course List</Card.Header>
           <Card.Body>
             <p className="lead">
               Browse and search through all {config.name} courses.
             </p>
-            
+
             <Form.Group className="mb-4">
               <Form.Control
                 size="lg"
@@ -46,9 +46,10 @@ export default function CourseList(props) {
                 placeholder="Search courses by code, name, or description..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search courses"
               />
             </Form.Group>
-            
+
             <div className="table-responsive">
               <Table striped bordered hover>
                 <thead className="table-light">
